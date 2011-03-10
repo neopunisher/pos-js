@@ -74,6 +74,10 @@ POSTagger.prototype.tag = function(words){
         // rule 2: convert a noun to a number (CD) if "." appears in the word
         if (startsWith(word, "N")) {
 			if (words[i].indexOf(".") > -1) {
+              // url if there are two contiguous alpha characters
+              if (/[a-zA-Z]{2}/.test(words[i]))
+                ret[i] = "URL";
+              else
                 ret[i] = "CD";
             }
 			// Attempt to convert into a number

@@ -63,6 +63,7 @@ TAGS:
     SYM Symbol                  +,%,&
     TO “to”                     to
     UH Interjection             oh, oops
+    URL url                     http://www.google.com/
     VB verb, base form          eat
     VBD verb, past tense        ate
     VBG verb, gerund            eating
