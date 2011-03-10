@@ -1,0 +1,16 @@
+{
+  "name":         "pos",
+  "description":  "fasttag part of speech tagger implementation",
+  "keywords":     ["nlp", "pos", "part of speech", "jspos", "fasttag"],
+  "author":       "Percy Wegmann",
+  "version":      "0.1.1",
+  "licenses": [{
+    "type":       "LGPL",
+    "url":        "http://www.gnu.org/licenses/lgpl.html"
+  }],
+  "engines": {
+    "node":       ">=0"
+  },
+  "main": "./main.js"
+}
+
