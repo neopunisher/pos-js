@@ -8,6 +8,10 @@
     "type":       "LGPL",
     "url":        "http://www.gnu.org/licenses/lgpl.html"
   }],
+  "repository": {
+    "type": "git",
+    "url": "https://gerad@github.com/fortnightlabs/pos-js.git"
+  },
   "engines": {
     "node":       ">=0"
   },
