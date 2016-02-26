@@ -91,8 +91,12 @@ POSTagger.prototype.tag = function(words){
         if (endsWith(words[i], "ly")) 
             ret[i] = "RB";
         // rule 5: convert a common noun (NN or NNS) to a adjective if it ends with "al"
-        if (startsWith(ret[i], "NN") && endsWith(word, "al")) 
-            ret[i] = i, "JJ";
+        // bug: this applies also to NNP NNPS
+        // bug: it said here: endsWith(word, "al"), this should be: endsWith(words[i], "al")
+        //if (startsWith(ret[i], "NN") && endsWith(word, "al")) 
+        if (((ret[i] === "NN") || (ret[i] === "NNS")) && endsWith(words[i], "al"))         
+            //ret[i] = i, "JJ";
+            ret[i] = "JJ";
         // rule 6: convert a noun to a verb if the preceding work is "would"
         if (i > 0 && startsWith(ret[i], "NN") && words[i - 1].toLowerCase() == "would")
             ret[i] = "VB";
